@@ -19,7 +19,8 @@ or
 keither input/output in Volts
 
 
-For Basic setup, paste following commands into telnet session (or send via asyn)
+# For Basic setup, paste following commands into telnet session (or send via asyn)
+```sh
 ###CHECK SETTINGS
 print(smua.sense)
 print(smua.measure.autozero)
@@ -58,9 +59,9 @@ print(smua.measure.autozero)
 # 0 off,1 on, 2 autodecide the reference
 print(smua.source.func)
 # 0 current (A) 1 voltage
+```
 
-
-
+# BOOK EXAMPLE with modification  change v and measure I:
 
 ``` sh
 #commands to input 
