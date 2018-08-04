@@ -18,6 +18,50 @@ or
 2V v limit
 keither input/output in Volts
 
+
+For Basic setup, paste following commands into telnet session (or send via asyn)
+###CHECK SETTINGS
+print(smua.sense)
+print(smua.measure.autozero)
+print(smua.source.func)
+## power cycle default (or reset()) = ?,2,1  (? depends on what you told it)
+print(smua.source.leveli)
+## current when source on (AMPS)
+
+
+###INITIALIZE
+
+smua.reset()
+smua.sense = smua.SENSE_REMOTE
+## SHOULD PRINT 1.00 here for 4wire
+#
+smua.measure.autozero = 2
+## 0 off,1 on, 2 autodecide the reference
+#
+smua.source.func = smua.OUTPUT_DCAMPS
+## 0 current 1 volts
+#
+###########-- Set source range to auto.
+smua.source.autorangei = smua.AUTORANGE_ON
+###########-- Set current source to 0.003A.
+smua.source.leveli = 1e-4
+###########-- Set voltage limit to 10 V.
+smua.source.limitv = 10
+###########-- Set voltage range to 10 V.
+smua.measure.rangev = 10  
+
+
+
+print(smua.sense)
+#1 for 4 wire
+print(smua.measure.autozero)
+# 0 off,1 on, 2 autodecide the reference
+print(smua.source.func)
+# 0 current (A) 1 voltage
+
+
+
+
 ``` sh
 #commands to input 
 #BOOK EXAMPLE with modification  change v and measure I:
