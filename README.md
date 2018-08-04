@@ -3,7 +3,7 @@ IOC for Keithley 2600B Series SourceMeter Instrument
 
 This ioc is currently under developmemnt.  Signifiant changes will occur.
 
-Initialization commands are currently needed. These are executed using telnet
+Initialization commands are currently needed. These are executed using telnet with the IOC off.
 
     `telnet 10.23.3.63 5025`
 
