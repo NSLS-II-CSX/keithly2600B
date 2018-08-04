@@ -61,7 +61,7 @@ print(smua.source.func)
 # 0 current (A) 1 voltage
 ```
 
-# BOOK EXAMPLE with modification  change v and measure I:
+# BOOK EXAMPLE with modification  change v & measure I:
 
 ``` sh
 #commands to input 
@@ -91,9 +91,10 @@ print(smua.measure.i(smua.nvbuffer1),smua.measure.v(smua.nvbuffer1),smua.measure
  
 ############-- Turn off output.
 smua.source.output = smua.OUTPUT_OFF
-print(smua.measure.i(smua.nvbuffer1),smua.measure.v(smua.nvbuffer1),smua.measure.r(smua.nvbuffer1))
- 
- 
+print(smua.measure.i(smua.nvbuffer1),smua.measure.v(smua.nvbuffer1),smua.measure.r(smua.nvbuffer1))``
+```
+# now change i & measure v
+```sh
 ##now change i and measure v
 smua.reset()
 ###########-- Select voltage source function.
@@ -117,8 +118,10 @@ smua.source.leveli = 3e-1
 print(smua.measure.i(smua.nvbuffer1),smua.measure.v(smua.nvbuffer1),smua.measure.r(smua.nvbuffer1))
 ######### measures 1e-1 mA because 
 ############-- END OF INITIALIZE
+```
 
-
+# A few more controls.
+```sh 
 ############-- A few more controls.
 ############-- Turn off output.
 smua.source.output = smua.OUTPUT_OFF
